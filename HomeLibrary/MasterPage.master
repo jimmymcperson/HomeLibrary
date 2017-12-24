@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="titleContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+        <asp:Literal ID="titleLiteral" runat="server" Text=" - Home Library"></asp:Literal>
+         </title>
+    <link rel="stylesheet" href="css/MasterPage.css" />
+</head>
+<body>
+    <header id="topbanner">
+        <a href="Home.aspx">Home</a> |
+        <a href="Books.aspx">Books</a> |
+        <a href="Addbook.aspx">Add Book</a> |
+        <a href="Search.aspx">Search</a> |
+    </header>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="mainContentPlaceHolder" runat="server">     
+          
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
