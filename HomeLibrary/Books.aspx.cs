@@ -23,6 +23,15 @@ public partial class Books : BasePage
     }
 
     /// <summary>
+    /// This handler lets you see a detailed view of the book.
+    /// </summary>
+    protected void bookLink_Click(object sender, EventArgs e)
+    {
+        Session["SelectedBook"] = (sender as LinkButton).Text;
+        Server.Transfer("BookDetails.aspx", true);
+    }
+
+    /// <summary>
     /// This handler removes all books from the list
     /// </summary>
     protected void removeAllButton_Click(object sender, EventArgs e)

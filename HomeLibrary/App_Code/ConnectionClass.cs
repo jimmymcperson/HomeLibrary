@@ -22,7 +22,7 @@ public class ConnectionClass
     // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     /// <summary>
-    /// This constructor builds the connection string and dataadapter.
+    /// This constructor builds the connection string.
     /// </summary>
     public ConnectionClass()
     {
