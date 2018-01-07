@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Setup.aspx.cs" Inherits="Setup" %>
+﻿<%@ Page Title="Setup" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Setup.aspx.cs" Inherits="Setup" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="titleContentPlaceHolder" Runat="Server">
+    Setup
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContentPlaceHolder" Runat="Server">
     <asp:Button ID="darkButton" runat="server" Text="Dark" OnClick="darkButton_Click" />

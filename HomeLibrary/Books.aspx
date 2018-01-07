@@ -5,7 +5,6 @@
     <h1>Books</h1>
   <p>This is the books page<asp:GridView ID="BookGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="ISBN" DataSourceID="SqlDataSource1">
       <Columns>
-          <%--<asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />--%>
           <asp:TemplateField HeaderText="Title">
               <ItemTemplate>
                   <asp:LinkButton ID="bookLink" runat="server" Text='<%#Eval("Title") %>' OnClick="bookLink_Click">
@@ -22,6 +21,6 @@
 
     </asp:Content>
 <asp:Content ID="titleID" ContentPlaceHolderID="titleContentPlaceHolder" Runat="Server">
-    Home
+    Books
 </asp:Content>
 

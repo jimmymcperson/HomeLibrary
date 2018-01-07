@@ -5,6 +5,6 @@
   <p>This is the search page</p>
 </asp:Content>
 <asp:Content ID="titleID" ContentPlaceHolderID="titleContentPlaceHolder" Runat="Server">
-    Home
+    Search
 </asp:Content>
 

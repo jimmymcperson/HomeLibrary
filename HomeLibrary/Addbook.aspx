@@ -2,7 +2,7 @@
 <%@ Register TagPrefix="wut" TagName="WebUserCTR" Src="WebUserControl.ascx"%>
 
 <asp:Content ID="mainID" ContentPlaceHolderID="mainContentPlaceHolder" Runat="Server">
-    <h1>Add Books</h1>
+    <h1>Add Book</h1>
   <p>
       <asp:Label ID="nameLabel" runat="server" Text="Name of book: "></asp:Label>
       <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
@@ -49,6 +49,6 @@
       <wut:webuserCTR ID="test" runat="server" />
   </asp:Content>
 <asp:Content ID="titleID" ContentPlaceHolderID="titleContentPlaceHolder" Runat="Server">
-    Home
+    Add Book
 </asp:Content>
 

@@ -6,7 +6,7 @@
 <head runat="server">
     <title>
         <asp:ContentPlaceHolder ID="titleContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
-        <asp:Literal ID="titleLiteral" runat="server" Text=" - Home Library"></asp:Literal>
+        <asp:Literal ID="titleLiteral" runat="server" Text=" | Home Library"></asp:Literal>
          </title>
     <link rel="stylesheet" href="css/MasterPage.css" />
 </head>
