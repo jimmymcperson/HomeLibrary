@@ -17,7 +17,8 @@
         <a href="Addbook.aspx">Add Book</a> |
         <a href="Search.aspx">Search</a> |
         <a href="Setup.aspx">Setup</a> |
-    </header>
+    </header>
+
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder id="mainContentPlaceHolder" runat="server">     
