@@ -26,7 +26,8 @@ public class ConnectionClass
     /// </summary>
     public ConnectionClass()
     {
-        con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Jon\\Desktop\\College\\Semester6\\COMP229\\assignment1\\HomeLibrary\\HomeLibrary\\Database1.mdb");
+        //con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Jon\\Desktop\\College\\Semester6\\COMP229\\assignment1\\HomeLibrary\\HomeLibrary\\Database1.mdb");
+        con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\Database1.mdb");
 
     }
 
@@ -35,8 +36,17 @@ public class ConnectionClass
     /// <summary>
     /// This method edits an entry in the database.
     /// </summary>
-    public void AddEntry(string isbn, string title, string author, string genre, string pages, string lended, string friendName, string comments)
+    public void AddEntry(string isbn, string title, string author, string genre, string pages, bool lended, string friendName, string comments)
     {
+        string answer;
+        if (lended)
+        {
+            answer = "Yes";
+        }
+        else
+        {
+            answer = "No";
+        }
         OleDbCommand cmd = new OleDbCommand();
         cmd.CommandType = CommandType.Text;
         cmd.CommandText = "insert into Book(ISBN, Title, Author, Genre, Pages, Lended, FriendName, Comments)"
@@ -46,7 +56,7 @@ public class ConnectionClass
         cmd.Parameters.AddWithValue("@Author", author);
         cmd.Parameters.AddWithValue("@Genre", genre);
         cmd.Parameters.AddWithValue("@Pages", pages);
-        cmd.Parameters.AddWithValue("@Lended", lended);
+        cmd.Parameters.AddWithValue("@Lended", answer);
         cmd.Parameters.AddWithValue("@FriendName", friendName);
         cmd.Parameters.AddWithValue("@Comments", comments);
         cmd.Connection = con;

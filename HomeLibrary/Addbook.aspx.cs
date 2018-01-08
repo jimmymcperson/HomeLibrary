@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class Addbook : BasePage
 {
+    ConnectionClass con;
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -30,16 +32,8 @@ public partial class Addbook : BasePage
     {
         if (Page.IsValid)
         {
-            if (Application["Books"] == null)
-            {
-                Application["Books"] = new List<Book>();
-            }
-            // casting to ensure program that Application["Books"] is List<Book>
-            List<Book> listOfBooks = (List<Book>)Application["Books"];
-            // create new book based on entries
-            Book book = new Book(nameTextBox.Text, authorTextBox.Text, isbnTextBox.Text, genreDropDownList.SelectedItem.Text, Int32.Parse(pagesTextBox.Text), lendedCheckBox.Checked, friendNameTextBox.Text, commentsTextBox.Text);
-            // add new book to the list
-            listOfBooks.Add(book);
+            con = new ConnectionClass();
+            con.AddEntry(isbnTextBox.Text, nameTextBox.Text, authorTextBox.Text, genreDropDownList.SelectedItem.Text, pagesTextBox.Text, lendedCheckBox.Checked, friendNameTextBox.Text, commentsTextBox.Text);
         }
     }
 }
